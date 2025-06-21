@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.maybemattie.hiddencosmetics;
 
 public class ClientProxy extends CommonProxy {
 

@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package com.maybemattie.hiddencosmetics;
 
 import java.io.File;
 

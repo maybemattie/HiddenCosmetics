@@ -1,8 +1,8 @@
 package com.maybemattie.hiddencosmetics;
 
+import com.maybemattie.hiddencosmetics.proxy.CommonProxy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -10,15 +10,19 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = HiddenCosmetics.MODID, version = Tags.VERSION, name = "MyMod", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = HiddenCosmetics.MODID,
+    version = Tags.VERSION,
+    name = "HiddenCosmetics",
+    acceptedMinecraftVersions = "[1.7.10]")
 public class HiddenCosmetics {
 
     public static final String MODID = "hiddencosmetics";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(
-        clientSide = "com.maybemattie.hiddencosmetics.ClientProxy",
-        serverSide = "com.maybemattie.hiddencosmetics.CommonProxy")
+        clientSide = "com.maybemattie.hiddencosmetics.proxy.ClientProxy",
+        serverSide = "com.maybemattie.hiddencosmetics.proxy.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler
